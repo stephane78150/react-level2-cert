@@ -1,4 +1,3 @@
-import { reduce } from "lodash";
 import { useListGamesQuery } from "../api";
 import { getOpponentScore, getTeamScore } from "../api/helper";
 import { Error } from "./Error";
@@ -15,6 +14,8 @@ export const Games: React.FC<{ teamId: number }> = ({ teamId }) => {
     new Date(),
     12
   );
+
+
   if (isLoading) {
     return <Loading />;
   }
@@ -39,8 +40,8 @@ export const Games: React.FC<{ teamId: number }> = ({ teamId }) => {
           <GameStatus key={g.id} teamId={teamId} game={g} className="mr-2 p-2" />
         ))}
       </div>
-      <div className="my-1 text-xs">Average points scored : {averagePointsScored}</div>
-      <div className="my-1 text-xs">Average points conceded : {averagePointsConceded}</div>
+      <div className="my-1 text-xs">Average points scored : <span className="font-bold">{averagePointsScored}</span></div>
+      <div className="my-1 text-xs">Average points conceded : <span className="font-bold">{averagePointsConceded}</span></div>
     </div>
   );
 };

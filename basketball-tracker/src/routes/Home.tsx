@@ -1,9 +1,10 @@
-import { TeamSelector } from "./components/TeamSelector";
-import { TeamCard } from './components/TeamCard';
-import { useTeamsReducer } from './state';
+import { TeamSelector } from "../components/TeamSelector";
+import { TeamCard } from '../components/TeamCard';
+import { useTeamsReducer } from '../state';
+import React from "react";
 
-function App() {
-  const { selected, addTeam, removeTeam } = useTeamsReducer();
+export const Home: React.FC = () => {
+  const { selected, addTeam, removeTeam } = useTeamsReducer();  
 
   return (
     <div className="p-5">
@@ -14,4 +15,3 @@ function App() {
   );
 }
 
-export default App;
