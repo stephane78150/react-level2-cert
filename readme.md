@@ -1,5 +1,7 @@
 # React Level 2 Certification demo application
 
+Live demo [here](https://stephane78150.github.io/react-level2-cert/)
+
 ## How to run
 
 I used __vite__ to build the site, it provides a better developer experience as it uses _no-bundling_ in developer mode.
